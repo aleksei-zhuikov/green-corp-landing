@@ -47,7 +47,7 @@ button {
     align-items: center;
     padding-top: 115px;
     padding-bottom: 115px;
-    background: url(/img/back.png) no-repeat;
+    background: url(./img/back.png) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -63,7 +63,7 @@ button {
 
 .about p {
     font-size: 18px;
-    line-height: 30;
+    line-height: 30px;
     opacity: 0.8;
 }
 
