@@ -135,7 +135,7 @@ button:hover {
 }
 
 .form__body input,
-select {
+.form__body select {
     font-size: 18px;
     color: #213053;
     height: 60px;
