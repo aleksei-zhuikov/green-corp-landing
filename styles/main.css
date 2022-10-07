@@ -5,6 +5,10 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,8 +89,25 @@ button:hover {
 }
 
 .about__sun-image {
+    position: absolute;
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: rotation 10s linear infinite; */
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Section form */
