@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: #213053;
@@ -139,6 +143,7 @@ button:hover {
 
 .form__group {
     display: flex;
+    position: relative;
     flex-direction: column;
     text-align: left;
 }
@@ -163,7 +168,24 @@ button:hover {
     height: 60px;
     padding: 0 20px 0 20px;
     border-radius: 15px;
-    border: none;
+    border: 3px solid transparent;
+    transition: border 0.4s;
+}
+
+.form__body input:focus,
+.form__body select:focus {
+    outline: none;
+    border-color: #f6980c;
+
+}
+
+/* Stylizing errorMessage ValidationForm */
+.just-validate-error-label {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 16px;
+
 }
 
 .form__submit {
@@ -176,8 +198,13 @@ select {
     appearance: none;
 }
 
+#budget:hover {
+    cursor: pointer;
+}
+
 input {
     outline: none;
+    margin-bottom: 3px;
 }
 
 /*Section Footer*/
