@@ -48,7 +48,8 @@ button {
   padding: 15px;
 }
 
-button:hover {
+button:hover,
+.promo__button-wrapper button:hover {
   background-color: #f6980c;
   box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
   transition: background-color 0.3s ease-in;
@@ -115,6 +116,176 @@ button:hover {
   }
 }
 
+/* Section Features */
+
+.features {
+  background-color: #fff;
+  padding: 115px 60px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card {
+  padding: 35px 40px 25px 40px;
+  border: 1px solid #D9E4E6;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: #eaeff9;
+  border-radius: 50%
+}
+
+.card__logo-yellow {
+  color: #ffb406;
+}
+
+.card__logo--red {
+  color: #ad1714;
+}
+
+.card__logo--green {
+  color: #22a030;
+}
+
+.features__border {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #E6EAF4;
+}
+
+/* features feedback */
+
+.features__feedback {
+  display: flex;
+}
+
+.features__feedback-left {
+  margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+  font-size: 48px;
+}
+
+.features__feedback-left p {
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.7;
+}
+
+.features__feedback-right {
+  display: flex;
+  align-items: center;
+}
+
+.features__box {
+  padding: 30px 40px 25px 40px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.features__box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+
+.features__savings-box {
+  background-color: #dc5e26;
+  margin-right: 30px;
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+}
+
+.features__rate-box {
+  background-color: #1D263A;
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+  color: #ff7039;
+}
+
+/* Section Promo */
+.promo {
+  display: flex;
+}
+
+.promo__image {
+  background-image: url(../img/promo.jpeg);
+  width: 50%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__right {
+  background: #dd5f26;
+  padding: 160px 60px;
+}
+
+.promo__text {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.promo__text p::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
+  margin-right: 10px;
+}
+
+.promo__text p {
+  opacity: 0.8;
+}
+
+.promo__text button {
+  background-color: #107b1c;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+  padding: 15px 30px;
+}
+
+.promo__button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.promo__text button i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
 /* Section form */
 
 .form__container {
@@ -123,13 +294,13 @@ button:hover {
 
 .form {
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: #1D263A;
   color: #fff;
   padding-top: 115px;
   padding-bottom: 115px;
-  text-align: center;
 }
 
 .form h1 {
@@ -158,7 +329,7 @@ button:hover {
 .form__body label {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form__body input,
@@ -166,7 +337,7 @@ button:hover {
   font-size: 18px;
   color: #213053;
   height: 60px;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   border-radius: 15px;
   border: 3px solid transparent;
   transition: border 0.4s;
@@ -236,7 +407,7 @@ input {
 .footer__group_title {
   font-size: 16px;
   opacity: 0.7;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .footer__links {
