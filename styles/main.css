@@ -58,6 +58,7 @@ button:hover,
 /* Section about */
 
 .about {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -66,6 +67,13 @@ button:hover,
   background: url(../img/back.png) no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
 }
 
 .about__info {
