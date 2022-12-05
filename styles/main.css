@@ -72,8 +72,10 @@ button:hover,
 .orb-canvas {
   position: absolute;
   top: 0;
-  height: 100%;
   right: 0;
+  height: 100%;
+  width: 100%;
+
 }
 
 .about__info {
