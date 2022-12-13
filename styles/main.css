@@ -10,14 +10,24 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* top: 0; */
   z-index: 1;
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+.header__scrolled {
+  background-color: #fff;
+  box-shadow: 0 12px 34px -11px rgb(65 62 101/10%);
 }
 
 .header__logo {

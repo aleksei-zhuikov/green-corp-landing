@@ -60,4 +60,22 @@ SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
     FORM.removeChild(OTHER_INPUT)
 
   }
+
 });
+
+
+// Изменяем шапку при скролле
+
+function updateScroll() {
+  const HEADER = document.querySelector('header');
+  if (window.scrollY > 0) {
+
+    HEADER.classList.add('header__scrolled')
+
+  } else {
+    HEADER.classList.remove('header__scrolled')
+
+  }
+}
+
+window.addEventListener('scroll', updateScroll)
