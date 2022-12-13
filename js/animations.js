@@ -23,7 +23,6 @@ function initIncreaseNumberAnimation() {
   increaseNumberAnimationStep(0, element, 5000)
 
 }
-initIncreaseNumberAnimation();
 
 
 // Форма выбора цены раздел другое
@@ -36,12 +35,9 @@ const FORM_BUTTON = document.querySelector('.form__submit');
 
 SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
 
-
-
   if (event.target.value === 'other') {
     let formContainer = document.createElement('div');
     formContainer.classList.add('form__group', 'form__other-input');
-
 
     INPUT.placeholder = 'Введите ваш вариант';
     INPUT.type = 'text';
@@ -52,7 +48,6 @@ SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
   };
 
   // удаляем ранее добавленное полеб если оно есть в DOM
-
   const OTHER_INPUT = document.querySelector('.form__other-input');
 
   if (event.target.value !== 'other' && Boolean(OTHER_INPUT)) {
@@ -66,7 +61,10 @@ SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
 
 // Изменяем шапку при скролле
 
+let animstionInited = false;
+
 function updateScroll() {
+  // Скролл для Header
   const HEADER = document.querySelector('header');
   if (window.scrollY > 0) {
 
@@ -75,6 +73,15 @@ function updateScroll() {
   } else {
     HEADER.classList.remove('header__scrolled')
 
+  }
+
+  // Скролл для анимации увеличение числа
+  let windowBottomPosition = window.scrollY + window.innerHeight;
+  let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+
+  if (windowBottomPosition >= 0 && !animstionInited) {
+    animstionInited = true;
+    initIncreaseNumberAnimation()
   }
 }
 
