@@ -29,14 +29,14 @@ function initIncreaseNumberAnimation() {
 
 const SELECT_BUDGET = document.querySelector('#budget');
 const INPUT = document.createElement('input');
-const FORM = document.querySelector('#form');
+const FORM = document.querySelector('.form #form');
 const FORM_BUTTON = document.querySelector('.form__submit');
 
 
 SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
 
   if (event.target.value === 'other') {
-    let formContainer = document.createElement('div');
+    const formContainer = document.createElement('div');
     formContainer.classList.add('form__group', 'form__other-input');
 
     INPUT.placeholder = 'Введите ваш вариант';
@@ -86,3 +86,24 @@ function updateScroll() {
 }
 
 window.addEventListener('scroll', updateScroll)
+
+
+// Добавляем тегу <a> обработчик
+
+function addSmoothScroll(anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+
+    });
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  addSmoothScroll(anchor);
+});
+
+
+addSmoothScroll(document.querySelector('.more-button'));
