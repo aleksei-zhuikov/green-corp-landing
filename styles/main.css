@@ -32,6 +32,11 @@ header {
 
 .header__logo {
   height: 30px;
+
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 a {
@@ -43,7 +48,6 @@ header a {
   font-size: 15px;
   font-weight: 600;
   margin-right: 25px;
-
 }
 
 button {

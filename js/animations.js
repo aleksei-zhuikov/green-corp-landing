@@ -61,11 +61,12 @@ SELECT_BUDGET.addEventListener('change', function handleSelectChange(event) {
 
 // Изменяем шапку при скролле
 
-let animstionInited = false;
+let animationInited = false;
 
 function updateScroll() {
   // Скролл для Header
   const HEADER = document.querySelector('header');
+  const SCROLL_LOGO = document.querySelector('.header__logo');
   if (window.scrollY > 0) {
 
     HEADER.classList.add('header__scrolled')
@@ -75,12 +76,19 @@ function updateScroll() {
 
   }
 
-  // Скролл для анимации увеличение числа
+  if (window.pageYOffset > 600) {
+    SCROLL_LOGO.classList.add('pointer')
+  } else {
+    SCROLL_LOGO.classList.remove('pointer')
+  }
+
+  // Запуск для анимации увеличение числа
   let windowBottomPosition = window.scrollY + window.innerHeight;
   let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+  console.log(document.querySelector('.features__clients-count').offsetTop)
 
-  if (windowBottomPosition >= 0 && !animstionInited) {
-    animstionInited = true;
+  if (windowBottomPosition >= countElementPosition && !animationInited) {
+    animationInited = true;
     initIncreaseNumberAnimation()
   }
 }
@@ -94,7 +102,12 @@ function addSmoothScroll(anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
+    if (e.target.closest('#move-up')) {
+      window.scrollTo(0, 0)
+    }
+
     document.querySelector(this.getAttribute('href')).scrollIntoView({
+
       behavior: 'smooth'
 
     });
@@ -107,3 +120,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 addSmoothScroll(document.querySelector('.more-button'));
+addSmoothScroll(document.querySelector('.move-up'));
