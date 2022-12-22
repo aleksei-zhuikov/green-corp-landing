@@ -85,7 +85,6 @@ function updateScroll() {
   // Запуск для анимации увеличение числа
   let windowBottomPosition = window.scrollY + window.innerHeight;
   let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
-  console.log(document.querySelector('.features__clients-count').offsetTop)
 
   if (windowBottomPosition >= countElementPosition && !animationInited) {
     animationInited = true;
