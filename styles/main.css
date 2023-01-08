@@ -310,6 +310,48 @@ button:hover,
   margin-left: 5px;
 }
 
+
+/* Section Map */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  /* padding: 115px 60px 50px; */
+  padding-top: 115px;
+
+  /* background-color: #ccc; */
+}
+
+.map-contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 50px;
+
+  /* background-color: rgb(85, 111, 217); */
+}
+
+.contacts__title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.contacts__description {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* .map-test {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(215, 166, 166);
+} */
+
+/* .contacts__phone a {
+  display: block;
+} */
+
 /* Section form */
 
 .form__container {

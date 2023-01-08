@@ -26,7 +26,7 @@
     <img class="header__logo move-up" href="#move-up" src="img/logo.svg" alt="logo">
     <div class="header__controls">
       <a href="#contacts">Контакты</a>
-      <button>Заказать</button>
+      <button class="order" href="#order_form">Заказать</button>
     </div>
   </header>
   <!-- Section About -->
@@ -117,7 +117,7 @@
   </section>
 
   <!-- Section Form -->
-  <section class="form" id="contacts">
+  <section class="form" id="order_form">
     <div class="form__container">
       <h1>Оставьте свои контакты</h1>
       <p>Поможем подобрать модель.<br>
@@ -153,6 +153,35 @@
       </form>
     </div>
   </section>
+
+  <!-- Section Map -->
+  <section id="contacts">
+    <div class="map-container">
+      <div class="map-contacts">
+        <div class="contacts__office">
+          <p class="contacts__title">Центральный оффис:</p>
+          <p class="contacts__description">г.Москва ул.Самая центральная д.125 стр.1</p>
+        </div>
+        <div class="contacts__hour-work">
+          <p class="contacts__title">Чачы работы:</p>
+          <p class="contacts__description">ежедневно с 9:00 до 23:00</p>
+        </div>
+        <div class="contacts__phone">
+          <p class="contacts__title">Телефоны:</p>
+          <p class="contacts__description">
+            <a href="tel:+74959999999" title="Позвонить в офис">+7 (495) 999-99-99</a>
+          </p>
+        </div>
+      </div>
+      <div class="map-test">
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8a4f2b7f67a6c3fb53263629eb334b15f816a9a4fc970d7c581bfca72f06e30d&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true">
+          </script>
+      </div>
+    </div>
+
+  </section>
+
   <!-- Section Footer -->
   <footer class="footer">
     <div class="footer__container">
@@ -181,6 +210,9 @@
     <div class="footer__copyright">GreenCorp &copy; 2021.</div>
   </footer>
 
+
+  <!-- <script type="text/javascript" charset="utf-8" async
+    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8a4f2b7f67a6c3fb53263629eb334b15f816a9a4fc970d7c581bfca72f06e30d&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script> -->
   <script defer src="./js/jastValidate/just-validate.production.min.js"></script>
   <script defer src="./js/input-mask/inputmask.min.js"></script>
   <script src="./js/animations.js"></script>

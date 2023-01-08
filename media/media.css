@@ -30,6 +30,18 @@
     padding: 70px 40px;
   }
 
+  /* Section Map and Contacts */
+  .map-contacts {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .map-container {
+    padding-top: 70px;
+  }
+
+
 }
 
 /* Mobile deveice */
